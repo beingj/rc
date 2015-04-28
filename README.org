@@ -44,21 +44,27 @@ echo . ~/rc.sh >> ~/.bashrc
 * Usage
 ** cdd
 Cd to a very deep directory.
+[[./cdd.gif]]
 
 ** ff
 Find a file by locate, and perform some actions to it.
+[[./ff.gif]]
 
 ** lss
 Find a file by find in current directory and sub directoris, and perform some actions to it.
+[[./lss.gif]]
 
 ** pss
 Find a process by ps and kill it.
+[[./pss.gif]]
 
 ** r
 Run a command in my favorite command list.
+[[./r.gif]]
 
 ** h
 Run a command in history.
+[[./h.gif]]
 
 * Acknowledge
 This script is inspired by [[http://blog.binchen.org/posts/how-to-do-the-file-navigation-efficiently.html][How to do the file navigation efficiently]] 
