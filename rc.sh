@@ -75,17 +75,16 @@ function select_and_do () {
     fi
     echo $list_cmd
     while true;do
-        #local path=$(eval $list_cmd | percol.py)
-        path=$(eval $list_cmd | percol.py)
-        #path=$($list_cmd | percol.py)
+        #also export p to current terminal, so we can use $p out of the function
+        p=$(eval $list_cmd | percol.py)
         echo '--------------------------------------------------'
-        echo path: $path
+        echo path: $p
         while true;do
-            local cmd=$(cmd_for_file $path|percol.py)
+            local cmd=$(cmd_for_file $p|percol.py)
             echo '--------------------------------------------------'
             echo cmd : $cmd
             echo '--------------------------------------------------'
-            [ "$cmd" == "manual input..." ] && read -p "\use \$path for selected file\ncmd: " cmd
+            [ "$cmd" == "manual input..." ] && echo "use \$p for selected file" && read -p "cmd: " cmd
             [ "$cmd" == "select another file" ] && break
             eval $cmd
             #[ $? -eq 0 ] && break
