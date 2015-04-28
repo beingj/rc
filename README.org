@@ -2,26 +2,48 @@
 #+DESCRIPTION: How to do work interactively
 #+Author: beingj
 #+Email: beingj@gmail.com
-#+HTML_HEAD: <style type="text/css"> h2{ margin: 5px 0 10px 0;background-color: #AEC5CE; font-size:1.5em;} </style>
-#+STYLE: <style type="text/css"> h2{ margin: 5px 0 10px 0;background-color: #AEC5CE; font-size:1.5em;} </style>
+#+HTML_HEAD: <style type="text/css"> body {width: 960px; margin:0 auto;} h2{ margin: 5px 0 10px 0;background-color: #AEC5CE; font-size:1.5em;} </style>
+#+STYLE: <style type="text/css"> body {width: 960px; margin:0 auto;} h2{ margin: 5px 0 10px 0;background-color: #AEC5CE; font-size:1.5em;} </style>
 #+LANGUAGE: en
-#+OPTIONS: num:nil
+#+OPTIONS: num:2
 
 #+OPTIONS: ^:{}
 #+OPTIONS: \n:t
+#+OPTIONS: html-postamble:nil
 
-  This script is inspired by [[http://blog.binchen.org/posts/how-to-do-the-file-navigation-efficiently.html][How to do the file navigation efficiently]] 
 * Problem
-- You have to press Tab again and agin when cd to some deep directories, vim some files in a deep directories.
+- Press Tab again and agin when cd to some very deep directories or vim some files in a deep directories.
 - Input a very long file name again and again to try different commands: unzip, tar , file, vim...
   
 * Installation
 ** Install percol
+[[https://github.com/mooz/percol/archive/master.zip][Download the package]] and extract it. Copy the sub-directory "percol/" to "~/bin". Rename "percol" in sub-directory "bin" to "percol.py" and copy it to "~/bin".
+
+#+BEGIN_SRC bash
+unzip percol-master.zip
+cd percol-master
+mkdir ~/bin
+cp percol ~/bin -a
+cp bin/percol ~/bin/percol.py 
+#+END_SRC
+
+Verify installation:
+
+#+BEGIN_SRC bash
+ps ax | percol.py
+#+END_SRC
+
 ** Intall this script
+Copy this script (rc.sh) to "~/" and source it from "~/.bashrc".
+
+#+BEGIN_SRC bash
+cp rc.sh ~/
+echo . ~/rc.sh >> ~/.bashrc 
+#+END_SRC
 
 * Usage
 ** cdd
-Cd to a deep directory.
+Cd to a very deep directory.
 
 ** ff
 Find a file by locate, and perform some actions to it.
@@ -38,3 +60,5 @@ Run a command in my favorite command list.
 ** h
 Run a command in history.
 
+* Acknowledge
+This script is inspired by [[http://blog.binchen.org/posts/how-to-do-the-file-navigation-efficiently.html][How to do the file navigation efficiently]] 
