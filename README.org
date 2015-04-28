@@ -1,0 +1,40 @@
+#+TITLE: How to do work interactively
+#+DESCRIPTION: How to do work interactively
+#+Author: beingj
+#+Email: beingj@gmail.com
+#+HTML_HEAD: <style type="text/css"> h2{ margin: 5px 0 10px 0;background-color: #AEC5CE; font-size:1.5em;} </style>
+#+STYLE: <style type="text/css"> h2{ margin: 5px 0 10px 0;background-color: #AEC5CE; font-size:1.5em;} </style>
+#+LANGUAGE: en
+#+OPTIONS: num:nil
+
+#+OPTIONS: ^:{}
+#+OPTIONS: \n:t
+
+  This script is inspired by [[http://blog.binchen.org/posts/how-to-do-the-file-navigation-efficiently.html][How to do the file navigation efficiently]] 
+* Problem
+- You have to press Tab again and agin when cd to some deep directories, vim some files in a deep directories.
+- Input a very long file name again and again to try different commands: unzip, tar , file, vim...
+  
+* Installation
+** Install percol
+** Intall this script
+
+* Usage
+** cdd
+Cd to a deep directory.
+
+** ff
+Find a file by locate, and perform some actions to it.
+
+** lss
+Find a file by find in current directory and sub directoris, and perform some actions to it.
+
+** pss
+Find a process by ps and kill it.
+
+** r
+Run a command in my favorite command list.
+
+** h
+Run a command in history.
+
